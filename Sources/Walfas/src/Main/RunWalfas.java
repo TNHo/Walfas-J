@@ -27,6 +27,17 @@ import javax.swing.JFrame;
 
 public class RunWalfas {
     public static void main(String[] args) {
-        
+        JFrame jf = new JFrame("Create.jar");
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jf.setResizable(true);
+        jf.setSize(1000, 800);
+        Container c = jf.getContentPane();
+        JButton nextPix = new JButton("");
+        WalfasJPanel flp = new WalfasJPanel(nextPix);
+        jf.add(flp);
+        jf.setVisible(true);
+        jf.setLayout(null);
+        Thread t = new Thread(flp);
+        t.start();
     }
 }
