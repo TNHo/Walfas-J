@@ -1,7 +1,7 @@
 /**
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * FILE: SplitChar.java
- * DATE: Dec 4, 2022
+ * DATE: June 20, 2023
  * AUTHOR: TNHo
  * VERSION: 1.0
  * PURPOSE: Assembles characters based off their DNA
