@@ -23,116 +23,71 @@ package Main;
 public class SplitChar {
 
     public SplitChar() {
-        DNAdata = "";
-        createType = "";
-        charName = "";
-        charSize = "";
-        hat = "";
-        hair = "";
-        body = "";
-        arm = "";
-        shoes = "";
-        eyes = "";
-        mouth = "";
-        items = "";
-        accessories = "";
-        back = "";
-        hairCol = "";
-        skinCol = "";
-        effects = "";
+        DNAParts = new String[16];
     }
 
     public String getCreateType() {
-        return createType;
+        return DNAParts[0];
     }
     public String getName() {
-        return charName;
+        return DNAParts[1];
     }
     public String getCharSize() {
-        return charSize;
+        return DNAParts[2];
     }
     public String getHat() {
-        return hat;
+        return DNAParts[3];
     }
     public String getHair() {
-        return hair;
+        return DNAParts[4];
     }
     public String getBody() {
-        System.out.println(body + " RETURNED!");
-        return body;
+        return DNAParts[5];
     }
     public String getArm() {
-        return arm;
+        return DNAParts[6];
     }
     public String getShoes() {
-        return shoes;
+        return DNAParts[7];
     }
     public String getEyes() {
-        return eyes;
+        return DNAParts[8];
     }
     public String getMouth() {
-        return mouth;
+        return DNAParts[9];
     }
     public String getItems() {
-        return items;
+        return DNAParts[10];
     }
     public String getAccessories() {
-        return accessories;
+        return DNAParts[11];
     }
     public String getBack() {
-        return back;
+        return DNAParts[12];
     }
     public String getHairCol() {
-        return hairCol;
+        return DNAParts[13];
     }
     public String getSkinCol() {
-        return skinCol;
+        return DNAParts[14];
     }
     public String getEffects() {
-        return effects;
+        return DNAParts[15];
     }
 
 //          1:    2:    3:   4:    5:    6:   7:     8:    9:    10:   11:          12:   13:        14:        15:      16:
 //Create type: Name: Size: Hat: Hair: Body: Arm: Shoes: Eyes: Mouth: Item: Accessories: Back: HairColor: SkinColor: Effects. 3-4
 //Create type: Name: Size: Hat: Hair: Body: Arm: Shoes: Eyes: Mouth: Item: Accessories: Back: HairColor 3-39
     public void splitDNA(String dna) {
+        DNAParts = dna.split(":");
+
         // Process to split the string by the : delimiter
-        //Print out these values to test, effects don't seem to work :/
         System.out.println(dna);
-        System.out.println(createType);
-        System.out.println(charName);
-        System.out.println(charSize);
-        System.out.println(hat);
-        System.out.println(hair);
-        System.out.println(body);
-        System.out.println(arm);
-        System.out.println(shoes);
-        System.out.println(eyes);
-        System.out.println(mouth);
-        System.out.println(items);
-        System.out.println(accessories);
-        System.out.println(back);
-        System.out.println(hairCol);
-        System.out.println(skinCol);
-        System.out.println(effects);
+        for(int i = 0; i < DNAParts.length; i++) {
+            System.out.println(DNAParts[i]);
+        }
     }
 
     //Declare globals
-    private String DNAdata;
-    private String createType;
-    private String charName;
-    private String charSize;
-    private String hat;
-    private String hair;
-    private String body;
-    private String arm;
-    private String shoes;
-    private String eyes;
-    private String mouth;
-    private String items;
-    private String accessories;
-    private String back;
-    private String hairCol;
-    private String skinCol;
-    private String effects;
+    private String[] DNAParts;
 }
