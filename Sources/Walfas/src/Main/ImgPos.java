@@ -1,0 +1,305 @@
+/**
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * FILE: ImgPos.java
+ * DATE: Dec 24, 2022
+ * AUTHOR: TNHo
+ * VERSION: 1.0
+ * PURPOSE: Storage of hardcoded svg image positions
+ *
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * NOTE: Why? This is not a good system. Could you come up with anything
+ * better?...
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+package Main;
+
+public class ImgPos {
+    public ImgPos() {
+        xPosHair1 = 0;
+        yPosHair1 = 0;
+        xPosHair2 = 0;
+        yPosHair2 = 0;
+        xPosBack = 0;
+        yPosBack = 0;
+        xPosItem = 0;
+        yPosItem = 0;
+        xPosHat = 0;
+        yPosHat = 0;
+        xPosShoes = 0;
+        yPosShoes = 0;
+        xPosHead = 0;
+        yPosHead = 0;
+        xPosBody = 0;
+        yPosBody = 0;
+        xPosEyes = 0;
+        yPosEyes = 0;
+        xPosArm = 0;
+        yPosArm = 0;
+        xPosMouth = 0;
+        yPosMouth = 0;
+    }
+
+    public int getHair1X(int sel) {
+        try {
+            int[] hair2XStore = {
+                    17,
+                    19,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10
+            };
+            xPosHair1 = hair2XStore[sel];
+            return xPosHair1;
+        } catch(Exception e) {
+            System.out.println(e);
+            xPosHair1 = -2;
+            return xPosHair1;
+        }
+    }
+    public int getHair1Y(int sel) {
+        try {
+            int[] hair2YStore = {
+                    60,
+                    68,
+                    50,
+                    50,
+                    50,
+                    50,
+                    50,
+                    50,
+                    50,
+                    50,
+                    50,
+                    50
+            };
+            yPosHair1 = hair2YStore[sel];
+            return yPosHair1;
+        } catch(Exception e) {
+            System.out.println(e);
+            yPosHair1 = 42; //Set default
+            return yPosHair1; //Return default
+        }
+    }
+    public int getHair2X(int sel) {
+        try {
+            int[] hair2XStore = {
+                    10,
+                    10,
+                    10,
+                    10,
+                    10,
+                    10,
+                    10,
+                    10,
+                    10,
+                    10,
+                    10,
+                    10,
+                    10,
+                    10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10,
+                    -10
+            };
+            xPosHair2 = hair2XStore[sel];
+            return xPosHair2;
+        } catch(Exception e) {
+            System.out.println(e);
+            xPosHair2 = -10;
+            return xPosHair2;
+        }
+    }
+    public int getHair2Y(int sel) {
+        try {
+            int[] hair2YStore = {
+                    63,
+                    75,
+                    50,
+                    50,
+                    50,
+                    50,
+                    50,
+                    50,
+                    50,
+                    50,
+                    50
+            };
+            yPosHair2 = hair2YStore[sel];
+            return yPosHair2;
+        } catch(Exception e) {
+            System.out.println(e);
+            yPosHair2 = 50; //Set default
+            return yPosHair2; //Return default
+        }
+    }
+    public int getBackX(int sel) {
+        return xPosBack;
+    }
+    public int getBackY(int sel) {
+        return yPosBack;
+    }
+    public int getItemX(int sel) {
+        return xPosItem;
+    }
+    public int getItemY(int sel) {
+        return yPosItem;
+    }
+    public int getHatX(int sel) {
+        xPosHat = 60;
+        return xPosHat;
+    }
+    public int getHatY(int sel) {
+        yPosHat = 30;
+        return yPosHat;
+    }
+    public int getShoeX(int sel) {
+        xPosShoes = 113;
+        return xPosShoes;
+    }
+    public int getShoeY(int sel) {
+        yPosShoes = 448;
+        return yPosShoes;
+    }
+    public int getHeadX(int sel) {
+        if (sel == 0) {
+            xPosHead = 190;
+        } else {
+            xPosHead = 208;
+        }
+        return xPosHead;
+    }
+    public int getHeadY(int sel) {
+        if (sel == 0) {
+            yPosHead = 184;
+        } else {
+            yPosHead = 240;
+        }
+        return yPosHead;
+    }
+    public int getBodyX(int sel) {
+        xPosBody = 150;
+        return xPosBody;
+    }
+    public int getBodyY(int sel) {
+        yPosBody = 200;
+        return yPosBody;
+    }
+    public int getEyesX(int sel) {
+        xPosEyes = 147;
+        return xPosEyes;
+    }
+    public int getEyesY(int sel) {
+        yPosEyes = 214;
+        return yPosEyes;
+    }
+    public int getArmX(int sel) {
+        xPosArm = 137;
+        return xPosArm;
+    }
+    public int getArmY(int sel) {
+        yPosArm = 251;
+        return yPosArm;
+    }
+    public int getMouthX(int sel) {
+        xPosMouth = 60;
+        return xPosMouth;
+    }
+    public int getMouthY(int sel) {
+        yPosMouth = 30;
+        return yPosMouth;
+    }
+
+    private int xPosHair1;
+    private int yPosHair1;
+    private int xPosHair2;
+    private int yPosHair2;
+    private int xPosBack;
+    private int yPosBack;
+    private int xPosItem;
+    private int yPosItem;
+    private int xPosHat;
+    private int yPosHat;
+    private int xPosShoes;
+    private int yPosShoes;
+    private int xPosHead;
+    private int yPosHead;
+    private int xPosBody;
+    private int yPosBody;
+    private int xPosEyes;
+    private int yPosEyes;
+    private int xPosArm;
+    private int yPosArm;
+    private int xPosMouth;
+    private int yPosMouth;
+}

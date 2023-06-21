@@ -75,9 +75,9 @@ public class SplitChar {
         return DNAParts[15];
     }
 
-//          1:    2:    3:   4:    5:    6:   7:     8:    9:    10:   11:          12:   13:        14:        15:      16:
-//Create type: Name: Size: Hat: Hair: Body: Arm: Shoes: Eyes: Mouth: Item: Accessories: Back: HairColor: SkinColor: Effects. 3-4
-//Create type: Name: Size: Hat: Hair: Body: Arm: Shoes: Eyes: Mouth: Item: Accessories: Back: HairColor 3-39
+    //          1:    2:    3:   4:    5:    6:   7:     8:    9:    10:   11:          12:   13:        14:        15:      16:
+    //Create type: Name: Size: Hat: Hair: Body: Arm: Shoes: Eyes: Mouth: Item: Accessories: Back: HairColor: SkinColor: Effects. 3-4
+    //Create type: Name: Size: Hat: Hair: Body: Arm: Shoes: Eyes: Mouth: Item: Accessories: Back: HairColor 3-39
     public void splitDNA(String dna) {
         DNAParts = dna.split(":");
 

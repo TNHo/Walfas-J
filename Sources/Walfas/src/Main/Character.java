@@ -54,7 +54,95 @@ public class Character {
         mouthYPos = 0;
     }
 
+    public BufferedImageGen getCharaImg(int sel) {
+        return characterArray[sel];
+    }
+    public int getXPositions(int sel) {
+        return xPositions[sel];
+    }
+    public int getYPositions(int sel) {
+        return yPositions[sel];
+    }
+    public int getSpeed() {
+        return speedVal;
+    }
 
+    public void buildCharacter(String DNA) {
+        BuildChar charaPath = new BuildChar(DNA);
+        SplitChar charaIndex = new SplitChar();
+        charaPath.checkDNAVer();
+        charaIndex.splitDNA(DNA);
+        ImgPos charaPos = new ImgPos();
+        // Set bufferedimages
+        imgShoe.setBufferedImg(charaPath.getShoePath());
+        imgHead1.setBufferedImg(charaPath.getHead1Path());
+        imgHead2.setBufferedImg(charaPath.getHead2Path());
+        imgHair1.setBufferedImg(charaPath.getHair1Path());
+        imgHair2.setBufferedImg(charaPath.getHair2Path());
+        imgArm.setBufferedImg(charaPath.getArmPath());
+        imgBody.setBufferedImg(charaPath.getBodyPath());
+        imgHat.setBufferedImg(charaPath.getHatPath());
+        imgMouth.setBufferedImg(charaPath.getMouthPath());
+        imgEyes.setBufferedImg(charaPath.getEyePath());
+        // Set X and Y pos
+        shoeXPos = charaPos.getShoeX(Integer.parseInt(charaIndex.getShoes()));
+        shoeYPos = charaPos.getShoeY(Integer.parseInt(charaIndex.getShoes()));
+        headX1Pos = charaPos.getHeadX(0);
+        headY1Pos = charaPos.getHeadY(0);
+        headX2Pos = charaPos.getHeadX(1);
+        headY2Pos = charaPos.getHeadY(1);
+        hairX1Pos = charaPos.getHair1X(Integer.parseInt(charaIndex.getHair()));
+        hairY1Pos = charaPos.getHair1Y(Integer.parseInt(charaIndex.getHair()));
+        hairX2Pos = charaPos.getHair2X(Integer.parseInt(charaIndex.getHair()));
+        hairY2Pos = charaPos.getHair2Y(Integer.parseInt(charaIndex.getHair()));
+        armXPos = charaPos.getArmX(Integer.parseInt(charaIndex.getArm()));
+        armYPos = charaPos.getArmY(Integer.parseInt(charaIndex.getArm()));
+        bodyXPos = charaPos.getBodyX(Integer.parseInt(charaIndex.getBody()));
+        bodyYPos = charaPos.getBodyY(Integer.parseInt(charaIndex.getBody()));
+        hatXPos = charaPos.getHatX(Integer.parseInt(charaIndex.getHat()));
+        hatYPos = charaPos.getHatY(Integer.parseInt(charaIndex.getHat()));
+        eyeXPos = charaPos.getEyesX(Integer.parseInt(charaIndex.getEyes()));
+        eyeYPos = charaPos.getEyesY(Integer.parseInt(charaIndex.getEyes()));
+        mouthXPos = charaPos.getMouthX(Integer.parseInt(charaIndex.getMouth()));
+        mouthYPos = charaPos.getMouthY(Integer.parseInt(charaIndex.getMouth()));
+        assignIndex();
+    }
+
+    public void assignIndex() {
+        // Set bufferedimage array indexes
+        characterArray[0] = imgShoe;
+        characterArray[1] = imgHead1;
+        characterArray[2] = imgHead2;
+        characterArray[3] = imgHair1;
+        characterArray[4] = imgHair2;
+        characterArray[5] = imgArm;
+        characterArray[6] = imgBody;
+        characterArray[7] = imgHat;
+        characterArray[8] = imgEyes;
+        characterArray[9] = imgMouth;
+        // X pos
+        xPositions[0] = shoeXPos;
+        xPositions[1] = headX1Pos;
+        xPositions[2] = headX2Pos;
+        xPositions[3] = hairX1Pos;
+        xPositions[4] = hairX2Pos;
+        xPositions[5] = armXPos;
+        xPositions[6] = bodyXPos;
+        xPositions[7] = hatXPos;
+        xPositions[8] = eyeXPos;
+        xPositions[9] = mouthXPos;
+        // Y pos
+        yPositions[0] = shoeYPos;
+        yPositions[1] = headY1Pos;
+        yPositions[2] = headY2Pos;
+        yPositions[3] = hairY1Pos;
+        yPositions[4] = hairY2Pos;
+        yPositions[5] = armYPos;
+        yPositions[6] = bodyYPos;
+        yPositions[7] = hatYPos;
+        yPositions[8] = eyeYPos;
+        yPositions[9] = mouthYPos;
+    }
 
     // Instance vars
     private BufferedImage leImage;

@@ -49,7 +49,20 @@ public class WalfasJPanel extends JPanel implements ActionListener, Runnable {
     }
 
     public void runGame(Graphics g) {
+        Character c1 = new Character();
 
+        c1.buildCharacter("3.4:Kanako (2):100:163:163:168:158:44:0:0:0:0:73:6767E4:FFF1DD:0");
+        // Why, just why?! WHY DID I DO THIS?! THIS IS SO HARD TO F#CKING READ AND DEBUG!!! But it works, we just have to find another way later...
+        g.drawImage(c1.getCharaImg(0).getImage(), c1.getXPositions(0), c1.getYPositions(0), this); // Shoes
+        g.drawImage(c1.getCharaImg(1).getImage(), c1.getXPositions(1), c1.getYPositions(1), this); // Head 1
+        g.drawImage(c1.getCharaImg(2).getImage(), c1.getXPositions(2), c1.getYPositions(2), this); // Head 2
+        g.drawImage(c1.getCharaImg(3).getImage(), c1.getXPositions(3)+c1.getXPositions(6), c1.getYPositions(6)-c1.getYPositions(3), this); // Hair 1
+        g.drawImage(c1.getCharaImg(4).getImage(), c1.getXPositions(4)+c1.getXPositions(6), c1.getYPositions(6)-c1.getYPositions(4), this); // Hair 2
+        g.drawImage(c1.getCharaImg(5).getImage(), c1.getXPositions(5), c1.getYPositions(5), this); // Arm
+        g.drawImage(c1.getCharaImg(6).getImage(), c1.getXPositions(6), c1.getYPositions(6), this); // Body
+        g.drawImage(c1.getCharaImg(7).getImage(), c1.getXPositions(7), c1.getYPositions(7), this); // Hat
+        g.drawImage(c1.getCharaImg(8).getImage(), c1.getXPositions(8), c1.getYPositions(8), this); // Eyes
+        g.drawImage(c1.getCharaImg(9).getImage(), c1.getXPositions(9), c1.getYPositions(9), this); // Mouth
     }
 
     public void test(Graphics g) {
