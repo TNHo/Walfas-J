@@ -216,34 +216,34 @@ public class ImgPos {
         return yPosItem;
     }
     public int getHatX(int sel) {
-        xPosHat = 60;
+        xPosHat = -90;
         return xPosHat;
     }
     public int getHatY(int sel) {
-        yPosHat = 30;
+        yPosHat = 170;
         return yPosHat;
     }
     public int getShoeX(int sel) {
-        xPosShoes = 113;
+        xPosShoes = -37;
         return xPosShoes;
     }
     public int getShoeY(int sel) {
-        yPosShoes = 448;
+        yPosShoes = -248;
         return yPosShoes;
     }
     public int getHeadX(int sel) {
         if (sel == 0) {
-            xPosHead = 190;
+            xPosHead = 40;
         } else {
-            xPosHead = 208;
+            xPosHead = 58;
         }
         return xPosHead;
     }
     public int getHeadY(int sel) {
         if (sel == 0) {
-            yPosHead = 184;
+            yPosHead = 16;
         } else {
-            yPosHead = 240;
+            yPosHead = -40;
         }
         return yPosHead;
     }
@@ -256,27 +256,27 @@ public class ImgPos {
         return yPosBody;
     }
     public int getEyesX(int sel) {
-        xPosEyes = 147;
+        xPosEyes = -3;
         return xPosEyes;
     }
     public int getEyesY(int sel) {
-        yPosEyes = 214;
+        yPosEyes = -14;
         return yPosEyes;
     }
     public int getArmX(int sel) {
-        xPosArm = 137;
+        xPosArm = -13;
         return xPosArm;
     }
     public int getArmY(int sel) {
-        yPosArm = 251;
+        yPosArm = -51;
         return yPosArm;
     }
     public int getMouthX(int sel) {
-        xPosMouth = 60;
+        xPosMouth = 0;
         return xPosMouth;
     }
     public int getMouthY(int sel) {
-        yPosMouth = 30;
+        yPosMouth = 0;
         return yPosMouth;
     }
 
