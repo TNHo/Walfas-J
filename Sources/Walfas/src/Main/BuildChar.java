@@ -105,7 +105,7 @@ public class BuildChar {
     }
     
     public void checkDNAVer() {
-        System.out.println(createType); //Print for debug reasons
+        // System.out.println(createType); //Print for debug reasons
         try {
             double createVer = Double.parseDouble(createType);
             if (createVer == 3.4) {
@@ -124,7 +124,7 @@ public class BuildChar {
     public void create339() {
         SVGData svgPath = new SVGData();
         ImgPos lePos = new ImgPos();
-        System.out.println(bodyVal + " MOVED!");
+        // System.out.println(bodyVal + " MOVED!"); // Debug print
         try {
             //Set head path
             headImg1Path = "Main/SVGImages/Basichead/0.svg";

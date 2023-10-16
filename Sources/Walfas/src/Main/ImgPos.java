@@ -118,7 +118,7 @@ public class ImgPos {
             xPosHair1 = hair2XStore[sel];
             return xPosHair1;
         } catch(Exception e) {
-            System.out.println(e);
+            //System.out.println(e);
             xPosHair1 = -2;
             return xPosHair1;
         }
@@ -142,7 +142,7 @@ public class ImgPos {
             yPosHair1 = hair2YStore[sel];
             return yPosHair1;
         } catch(Exception e) {
-            System.out.println(e);
+            //System.out.println(e);
             yPosHair1 = 42; //Set default
             return yPosHair1; //Return default
         }
@@ -175,7 +175,7 @@ public class ImgPos {
             xPosHair2 = hair2XStore[sel];
             return xPosHair2;
         } catch(Exception e) {
-            System.out.println(e);
+            //System.out.println(e);
             xPosHair2 = -10;
             return xPosHair2;
         }
@@ -198,7 +198,7 @@ public class ImgPos {
             yPosHair2 = hair2YStore[sel];
             return yPosHair2;
         } catch(Exception e) {
-            System.out.println(e);
+            //System.out.println(e);
             yPosHair2 = 50; //Set default
             return yPosHair2; //Return default
         }

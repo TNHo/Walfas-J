@@ -47,8 +47,8 @@ public class BufferedImageGen {
             // Get the absolute path of the file
             filePath = file.getAbsolutePath();
 
-            // Print the file path to the console
-            System.out.println(filePath);
+            // Print the file path to the console for debug reasons
+            // System.out.println(filePath);
 
             // Create a TranscoderInput object from the SVG file
             String svgURI = file.toURI().toString();

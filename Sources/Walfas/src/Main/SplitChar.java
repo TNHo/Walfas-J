@@ -82,10 +82,11 @@ public class SplitChar {
         DNAParts = dna.split(":");
 
         // Process to split the string by the : delimiter
-        System.out.println(dna);
-        for(int i = 0; i < DNAParts.length; i++) {
-            System.out.println(DNAParts[i]);
-        }
+        //Debug statements
+        //System.out.println(dna);
+        //for(int i = 0; i < DNAParts.length; i++) {
+        //    System.out.println(DNAParts[i]);
+        //}
     }
 
     //Declare globals
