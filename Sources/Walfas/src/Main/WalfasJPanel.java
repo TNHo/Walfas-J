@@ -21,29 +21,21 @@ import javax.swing.JPanel.*;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class WalfasJPanel extends JPanel implements ActionListener, Runnable, MouseListener{
+public class WalfasJPanel extends JPanel implements ActionListener, Runnable, MouseMotionListener{
+    private int x;
+    private int y;
     @Override
-    public void mouseClicked(MouseEvent e) {
-
+    public void mouseDragged(MouseEvent e) {
+        x = e.getX();
+        y = e.getY();
+        // Debug prints
+        //System.out.println("X pos is "+x);
+        //System.out.println("Y pos is "+y+"\n");
+        c1.changePos(x, y);
     }
 
     @Override
-    public void mousePressed(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseExited(MouseEvent e) {
+    public void mouseMoved(MouseEvent e) {
 
     }
     public WalfasJPanel(JButton button) {
@@ -51,6 +43,11 @@ public class WalfasJPanel extends JPanel implements ActionListener, Runnable, Mo
     }
 
     public void run() {
+        try {
+            this.addMouseMotionListener(this); // Allows us to have mouse inputs
+        } catch(Exception err) {
+            System.out.println(err);
+        }
         while (true) {
             try {
                 Thread.sleep(33); // adjust this value as needed
@@ -62,7 +59,7 @@ public class WalfasJPanel extends JPanel implements ActionListener, Runnable, Mo
     }
 
     public void actionPerformed(ActionEvent ae) {
-        //repaint();
+        repaint();
     }
 
     public void paintComponent(Graphics g) {
@@ -72,9 +69,8 @@ public class WalfasJPanel extends JPanel implements ActionListener, Runnable, Mo
     }
 
     public void runGame(Graphics g) {
-        Character c1 = new Character();
         c1.buildCharacter("3.4:Kanako (2):100:163:163:168:158:44:0:0:0:0:73:6767E4:FFF1DD:0");
-        //c1.buildCharacter("3.4:Kanako (2):100:163:163:168:158:44:0:1:0:0:73:6767E4:FFF1DD:0");
+        //c1.buildCharacter("3.4:Kanako (2):100:163:163:168:158:44:0:1:0:0:73:6767E4:FFF1DD:0"); // with mouth test
         // Why, just why?! WHY DID I DO THIS?! THIS IS SO HARD TO F#CKING READ AND DEBUG!!! But it works, we just have to find another way later...
         // Every position of each part will be based on the position of 'Body' or index 6
         g.drawImage(c1.getCharaImg(0).getImage(), c1.getXPositions(0)+c1.getXPositions(6), c1.getYPositions(6)-c1.getYPositions(0), this); // Shoes
@@ -87,11 +83,12 @@ public class WalfasJPanel extends JPanel implements ActionListener, Runnable, Mo
         g.drawImage(c1.getCharaImg(7).getImage(), c1.getXPositions(7)+c1.getXPositions(6), c1.getYPositions(6)-c1.getYPositions(7), this); // Hat
         g.drawImage(c1.getCharaImg(8).getImage(), c1.getXPositions(8)+c1.getXPositions(6), c1.getYPositions(6)-c1.getYPositions(8), this); // Eyes
         g.drawImage(c1.getCharaImg(9).getImage(), c1.getXPositions(9)+c1.getXPositions(6), c1.getYPositions(6)-c1.getYPositions(9), this); // Mouth
+        // System.out.println(c1.getXPositions(6)); print position of body for debugging
     }
 
-    public void test(Graphics g) {
+    public void unitTest(Graphics g) {
 
     }
 
-
+    private Character c1 = new Character();
 }

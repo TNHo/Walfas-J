@@ -29,8 +29,8 @@ public class ImgPos {
         yPosShoes = 0;
         xPosHead = 0;
         yPosHead = 0;
-        xPosBody = 0;
-        yPosBody = 0;
+        xPosBody = 150;
+        yPosBody = 200;
         xPosEyes = 0;
         yPosEyes = 0;
         xPosArm = 0;
@@ -248,13 +248,18 @@ public class ImgPos {
         return yPosHead;
     }
     public int getBodyX(int sel) {
-        xPosBody = 150;
         return xPosBody;
     }
     public int getBodyY(int sel) {
-        yPosBody = 200;
         return yPosBody;
     }
+    public void changeBodyX(int change) {
+        xPosBody = change;
+    }
+    public void changeBodyY(int change) {
+        yPosBody = change;
+    }
+
     public int getEyesX(int sel) {
         xPosEyes = -3;
         return xPosEyes;

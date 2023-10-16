@@ -69,10 +69,8 @@ public class Character {
 
     public void buildCharacter(String DNA) {
         BuildChar charaPath = new BuildChar(DNA);
-        SplitChar charaIndex = new SplitChar();
         charaPath.checkDNAVer();
         charaIndex.splitDNA(DNA);
-        ImgPos charaPos = new ImgPos();
         // Set bufferedimages
         imgShoe.setBufferedImg(charaPath.getShoePath());
         imgHead1.setBufferedImg(charaPath.getHead1Path());
@@ -106,6 +104,11 @@ public class Character {
         mouthXPos = charaPos.getMouthX(Integer.parseInt(charaIndex.getMouth()));
         mouthYPos = charaPos.getMouthY(Integer.parseInt(charaIndex.getMouth()));
         assignIndex();
+    }
+
+    public void changePos(int x, int y) {
+        charaPos.changeBodyX(x);
+        charaPos.changeBodyY(y);
     }
 
     public void assignIndex() {
@@ -145,6 +148,8 @@ public class Character {
     }
 
     // Instance vars
+    private SplitChar charaIndex = new SplitChar();
+    private ImgPos charaPos = new ImgPos();
     private BufferedImage leImage;
     private String DNAString;
     private boolean isFlipped;
