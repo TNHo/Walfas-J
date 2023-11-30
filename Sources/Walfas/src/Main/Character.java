@@ -67,6 +67,12 @@ public class Character {
         return speedVal;
     }
 
+    /**
+     * Build the Walfas character.
+     * 
+     * @param DNA   Literally what it says on the tin. It gets
+     *              passed into an instance of BuildChar
+     */
     public void buildCharacter(String DNA) {
         BuildChar charaPath = new BuildChar(DNA);
         charaPath.checkDNAVer();

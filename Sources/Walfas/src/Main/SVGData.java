@@ -17,10 +17,18 @@
 package Main;
 
 public class SVGData {
-    public SVGData() {
 
+    public SVGData() { // An empty constructor... It does nothing...
     }
-    //Store SVG file nums in an array, then send it to BuildChar
+    
+    /**
+     * Store SVG file nums in an array, then send it to BuildChar.
+     * This applies to essentially the rest of the getter methods below...
+     * 
+     * @param sel   The number value from a specific part of the dna.
+     * @return      Whatever number value (as a String) that will be
+     *              part of the filepath for that parts. 
+     */
     public String getBody(int sel) {
         int rayNum = -1;
         String[] filePathNum = new String[401];

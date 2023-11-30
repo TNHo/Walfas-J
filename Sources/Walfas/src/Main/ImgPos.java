@@ -7,8 +7,9 @@
  * PURPOSE: Storage of hardcoded svg image positions
  *
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * NOTE: Why? This is not a good system. Could you come up with anything
- * better?...
+ * NOTE: This is a monstrosity...
+ * We should probably dump these values onto a text file and read off of that...
+ * It would definitely make the code below more... clean.
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
 package Main;

@@ -27,16 +27,33 @@ public class BufferedImageGen {
         leImage = new BufferedImage(100, 100, BufferedImage.TYPE_INT_ARGB);
     }
 
-    // Accessors
+    /**
+     * The getter for leImage
+     * 
+     * @return leImage      The result of letting Java Batik do its magic.
+     * 
+     */
     public BufferedImage getImage() {
         return leImage;
     }
 
-    // Mutators
+    /**
+     * Sends the .SVG image path and sets leImage to an actual image...
+     * 
+     * @param svgPath   The path of the .SVG image, which gets passed
+     *                  into transcodeSVGImage() and creates some BufferedImage,
+     *                  the thing we want...
+     */
     public void setBufferedImg(String svgPath) {
         leImage = transcodeSVGImage(svgPath);
     }
 
+    /**
+     * Where Java Batik does stuff and gets us our image.
+     * 
+     * @param svgPath   The file path, without it we fall flat on our faces...
+     * @return image    The resulting image...
+     */
     public BufferedImage transcodeSVGImage(String svgPath) {
         try {
             ClassLoader classLoader = getClass().getClassLoader();
