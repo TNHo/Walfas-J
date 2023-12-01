@@ -86,9 +86,5 @@ public class WalfasJPanel extends JPanel implements ActionListener, Runnable, Mo
         // System.out.println(c1.getXPositions(6)); print position of body for debugging
     }
 
-    public void unitTest(Graphics g) {
-
-    }
-
     private Character c1 = new Character();
 }
