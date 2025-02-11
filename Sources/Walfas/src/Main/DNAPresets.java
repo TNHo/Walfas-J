@@ -7,7 +7,9 @@
 * PURPOSE: Pre-made DNA, mostly of touhou characters
 *
 * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* NOTE: SVG assets downloaded from RSGmaker's github
+* NOTE: SVG assets downloaded from RSGmaker's github...
+*
+* Maybe we should store all these into a text file?...
 * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
 package Main;

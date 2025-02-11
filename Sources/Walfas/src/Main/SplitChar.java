@@ -9,8 +9,7 @@
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * NOTE - I'm cooking lots of spaghetti (which is bad) - TNHo
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- */
-/*
+ * 
  * Walfas DNA (3.4) is usually broken up as:
  * Create type: Name: Size: Hat: Hair: Body: Arm: Shoes: Eyes: Mouth: Item: Accessories:
  * Back: HairColor: SkinColor: Effects.
@@ -18,6 +17,11 @@
  * Create type: Name: Size: Hat: Hair: Body: Arm: Shoes: Eyes: Mouth: Items: Accessories:
  * Back: HairColor
  */
+
+//          1:    2:    3:   4:    5:    6:   7:     8:    9:    10:   11:          12:   13:        14:        15:      16:
+//Create type: Name: Size: Hat: Hair: Body: Arm: Shoes: Eyes: Mouth: Item: Accessories: Back: HairColor: SkinColor: Effects. 3-4
+//Create type: Name: Size: Hat: Hair: Body: Arm: Shoes: Eyes: Mouth: Item: Accessories: Back: HairColor 3-39
+
 package Main;
 
 public class SplitChar {
@@ -75,18 +79,15 @@ public class SplitChar {
         return DNAParts[15];
     }
 
-    //          1:    2:    3:   4:    5:    6:   7:     8:    9:    10:   11:          12:   13:        14:        15:      16:
-    //Create type: Name: Size: Hat: Hair: Body: Arm: Shoes: Eyes: Mouth: Item: Accessories: Back: HairColor: SkinColor: Effects. 3-4
-    //Create type: Name: Size: Hat: Hair: Body: Arm: Shoes: Eyes: Mouth: Item: Accessories: Back: HairColor 3-39
+
+    /**
+     * Process to split the string by the : delimiter
+     * 
+     * @param   dna     The value should be split amongst the array
+     *                  referred to as 'DNAParts'
+     */
     public void splitDNA(String dna) {
         DNAParts = dna.split(":");
-
-        // Process to split the string by the : delimiter
-        //Debug statements
-        //System.out.println(dna);
-        //for(int i = 0; i < DNAParts.length; i++) {
-        //    System.out.println(DNAParts[i]);
-        //}
     }
 
     //Declare globals

@@ -54,19 +54,42 @@ public class Character {
         mouthYPos = 0;
     }
 
+    /**
+     * Grab the image required from the array.
+     *
+     * @param sel   The selection of whatever character part.
+     * @return      A specific entry in characterArray.
+     */
     public BufferedImageGen getCharaImg(int sel) {
         return characterArray[sel];
     }
+
+    /**
+     * Grab the appropriate position from the array.
+     *
+     * @param sel   The selection of whatever character part.
+     * @return      A specific position based on choice.
+     */
     public int getXPositions(int sel) {
         return xPositions[sel];
     }
+
+    /**
+     * Grab the appropriate position from the array.
+     *
+     * @param sel   The selection of whatever character part.
+     * @return      A specific position based on choice.
+     */
     public int getYPositions(int sel) {
         return yPositions[sel];
     }
-    public int getSpeed() {
-        return speedVal;
-    }
 
+    /**
+     * Build the Walfas character.
+     * 
+     * @param DNA   Literally what it says on the tin. It gets
+     *              passed into an instance of BuildChar
+     */
     public void buildCharacter(String DNA) {
         BuildChar charaPath = new BuildChar(DNA);
         charaPath.checkDNAVer();
@@ -106,6 +129,15 @@ public class Character {
         assignIndex();
     }
 
+    /**
+     * Sends the x and y params to an instance of ImgPos
+     * to change the position of the body, which in turn,
+     * changes the character's location since all the parts
+     * are linked to it.
+     *
+     * @param x     The 'x' position
+     * @param y     The 'y' position
+     */
     public void changePos(int x, int y) {
         charaPos.changeBodyX(x);
         charaPos.changeBodyY(y);

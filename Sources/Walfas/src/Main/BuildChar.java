@@ -60,7 +60,13 @@ public class BuildChar {
         xHair2Pos = 0;
         yHair2Pos = 0;
     }
-    
+
+    /**
+     * Sets those variables to their corresponding values,
+     * based on what was present in the DNA value.
+     *
+     * @param DNA    The DNA String.
+     */
     public BuildChar(String DNA) {
         try {
         //Allow access to AssembleChar class
@@ -103,9 +109,13 @@ public class BuildChar {
             System.out.println(e);
         }
     }
-    
+
+    /**
+     * Checking which Walfas DNA types is being used.
+     * Must maintain compatibility between the original
+     * Walfas and the createX version.
+     */
     public void checkDNAVer() {
-        // System.out.println(createType); //Print for debug reasons
         try {
             double createVer = Double.parseDouble(createType);
             if (createVer == 3.4) {
@@ -119,8 +129,12 @@ public class BuildChar {
             System.out.println(e); //OH, NO!
         }
     }
-    
-    //Fields for original KirbyM DNA type
+
+    /**
+     * Fields for original KirbyM DNA type.
+     * Assembles the file paths for the .SVG images,
+     * based on the values set.
+     */
     public void create339() {
         SVGData svgPath = new SVGData();
         ImgPos lePos = new ImgPos();
@@ -182,8 +196,11 @@ public class BuildChar {
             System.out.println(e);
         }
     }
-    
-    //Extra fields for create.X DNA types
+
+    /**
+     * Extra fields for create.X DNA types.
+     * Not yet implemented...
+     */
     public void create34() {
         
     }
